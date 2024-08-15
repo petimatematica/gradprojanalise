@@ -54,11 +54,11 @@ Armijo linesearch along feasible directions.
 - projection (Function): The function that projects the updated point onto a feasible set.
 - η (Float64): The sufficient decrease parameter used in the line search condition.
 - min_step (Float64): The minimum allowable step size before triggering an error.
-- γ_start (Float64): The initial guess for the step size `γ`.
-- β2 (Float64): The upper bound for the step size `β`.
+- γ_start (Float64): The initial guess for the step size γ.
+- β2 (Float64): The upper bound for the step size β.
 
 ### Returns:
 - γ (Float64): The computed step size for the projection update.
 - β (Float64): The updated step size after evaluating the quadratic approximation.
-- ierror (Int): Error flag, set to 1 if the step size `γ` becomes too small.
+- ierror (Int): Error flag, set to 1 if the step size γ becomes too small.
 - evalf (Int): The number of function evaluations performed during the step size adjustment.
