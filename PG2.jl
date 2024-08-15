@@ -40,7 +40,7 @@ function PG2(x, f, ∇f, projection, η, min_step, γ_start, β2)
     return (γ, β, ierror, evalf)
 end
 
-function method2(x, f, ∇f, ε, max_iter, GPA1, projection)
+function method2(x, f, ∇f, ε, max_iter, PG2, projection)
 
     fvals = Float64[]
     gradnorms = Float64[]
