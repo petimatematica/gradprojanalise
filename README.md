@@ -84,7 +84,7 @@ Implements the Spectral Projected Gradient (SPG) Method. It performs optimizatio
 - linesearch (Function): The line search function to adjust step sizes.
 
 ## Function spg1:
-Nonmonotonic linesearch proposed by Grippo, Lampariello and Lucidi.
+Nonmonotone linesearch proposed by Grippo, Lampariello and Lucidi.
 
 - k (Int): Current iteration number.
 - lambda_k (Float64): Current step size parameter.
@@ -108,7 +108,7 @@ Nonmonotonic linesearch proposed by Grippo, Lampariello and Lucidi.
 - evalproj (Int): Number of projection evaluations.
 
 ## Function spg2:
-Nonmonotonic linesearch proposed by Birgin, Raydan and Martínez.
+Nonmonotone linesearch proposed by Birgin, Raydan and Martínez.
 
 - k (Int): Current iteration number.
 - lambda_k (Float64): Current step size parameter.
@@ -130,3 +130,34 @@ Nonmonotonic linesearch proposed by Birgin, Raydan and Martínez.
 - et (Float64): Elapsed time for the line search.
 - evalf (Int): Number of function evaluations.
 - evalproj (Int): Number of projection evaluations.
+
+# performances.jl 
+This code compares different optimization methods (PG1, PG2, SPG1, SPG2) on various test problems using the CUTEst library. It measures the performance in terms of iterations, CPU time, function evaluations, and projection evaluations. The results are stored and performance profiles are generated.
+
+## Requirements
+Ensure the following Julia packages are installed:
+- CUTEst
+- NLPModels
+- LinearAlgebra
+- DataFrames
+- Random
+- Printf
+- Plots
+- BenchmarkProfiles
+- JLD2
+
+## Parameters
+
+- η: 1.e-4 (The sufficient decrease parameter).
+- ε: 1.e-5 (Convergence criterion).
+- β_start: 1.0 (Initial value for the β parameter in the projected gradient method).
+- β1: 0.01 (Minimum value for the β parameter).
+- β2: 0.9 (Maximum value for the β parameter).
+- γ_start: 1.0  (Initial step size γ in the linesearch).
+- min_step: 1.e-5 (Minimum allowed step size γ).
+- max_iter: 40000 (Maximum number of iterations).
+- lambda_min: 1.e-30 (Minimum value for the spectral step parameter in the SPG method).
+- lambda_max: 1.e+30 (Maximum value for the spectral step parameter in the SPG method).
+- M: 10 (Number that determines the decrease of the function in nonmonotone linesearch).
+- sigma1: 0.1 (Lower bound for step size update in the linesearch).
+- sigma2: 0.9 (Upper bound for step size update in the linesearch).
