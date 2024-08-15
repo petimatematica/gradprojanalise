@@ -40,7 +40,6 @@ for strategy in strategies
             
             # Initial guess from CUTEst
             x0 = nlp.meta.x0
-            println("x0 =", x0)
             global x0
         
             # Objective functions from CUTEst
