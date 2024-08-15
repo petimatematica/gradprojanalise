@@ -108,7 +108,7 @@ Nonmonotone linesearch proposed by Grippo, Lampariello and Lucidi.
 - evalproj (Int): Number of projection evaluations.
 
 ## Function spg2:
-Nonmonotone linesearch proposed by Birgin, Raydan and Martínez.
+Nonmonotone linesearch proposed by Birgin, Martínez and Raydan.
 
 - k (Int): Current iteration number.
 - lambda_k (Float64): Current step size parameter.
