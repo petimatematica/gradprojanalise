@@ -84,7 +84,7 @@ Implements the Spectral Projected Gradient (SPG) Method. It performs optimizatio
 - linesearch (Function): The line search function to adjust step sizes.
 
 ## Function spg1:
-Performs a backtracking line search with the SPG method, adjusting step size α to ensure sufficient decrease. It takes the following parameters:
+Nonmonotonic linesearch proposed by Grippo, Lampariello and Lucidi.
 
 - k (Int): Current iteration number.
 - lambda_k (Float64): Current step size parameter.
@@ -108,7 +108,7 @@ Performs a backtracking line search with the SPG method, adjusting step size α 
 - evalproj (Int): Number of projection evaluations.
 
 ## Function spg2:
-Performs a backtracking line search with a different approach, adjusting the step size α and updating the solution accordingly. It takes the following parameters:
+Nonmonotonic linesearch proposed by Birgin, Raydan and Martínez.
 
 - k (Int): Current iteration number.
 - lambda_k (Float64): Current step size parameter.
