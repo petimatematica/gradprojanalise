@@ -63,7 +63,7 @@ Armijo linesearch along feasible directions.
 - ierror (Int): Error flag, set to 1 if the step size γ becomes too small.
 - evalf (Int): The number of function evaluations performed during the step size adjustment.
 
-# PG1.jl 
+# SPG.jl 
 This file contains the implementation of the Spectral Projected Gradient Method (SPG).
 
 ## Function spg:
