@@ -1,3 +1,15 @@
+Os estudos numéricos foram realizados para comparar os métodos do Gradiente Projetado e do Gradiente Espectral Projetado. Para isso, consideramos o problema de minimizar a função $q: K \to \mathbb{R}$ definida por 
+
+$$
+    q(v) = \frac{1}{2} \int_\Omega |\nabla v(x)|^2\ dx - c \int_\Omega v(x)\ dx,
+$$
+
+sujeito a $v \in K$, onde $K = \{v \in H_0^1(\Omega); |v(x)| \le 1, x \in \Omega\}$. Vale ressaltar que $K$ é um conjunto convexo e fechado em um espaço de Hilbert e que $c \in \mathbb{R}$ é definido como o ângulo de torção por unidade de comprimento.
+
+Os problemas de minimizar o funcional $q$, definido acima, estão disponíveis na biblioteca CUTEst (*Constrained and Unconstrained Testing Environment for Optimization Software*), que é uma biblioteca de teste para softwares de otimização, veja \cite{Gould2015}. Eles consistem em $12$ problemas de programação quadrática definidos em conjuntos com restrições de limitação de variáveis e são denominados por: TORSION1, TORSION2, TORSION3, TORSION4, TORSION5, TORSION6, TORSIONA, TORSIONB, TORSIONC, TORSIOND, TORSIONE e TORSIONF. Esses problemas assumem os valores de $c$ igual a $5$, $10$ ou $20$.
+
+O conjunto $\Omega$ que tomamos é definido por $\{ x \in \mathbb{R}^n ; x_j \in [-100, 50], j = 1, \ldots, n \}$. As dimensões implementadas em cada um dos problemas mencionados foram $16, 100, 484$ e $1024$, conforme os parâmetros pré-definidos na biblioteca CUTEst. Para cada caso, tomamos um chute inicial, fornecido pelo CUTEst, e projetado em $\Omega$. Assim, foram testados 48 problemas.
+
 # PG1.jl 
 
 This file contains the implementation of the Projected Gradient Method (PG) equipped with Armijo's linear search along the projection arc.
