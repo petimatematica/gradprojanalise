@@ -8,7 +8,7 @@ $$
 
 subject to $v \in K$, where $K = \{v \in H_0^1(\Omega); |v(x)| \le 1, x \in \Omega\}$. It is worth noting that $K$ is a convex and closed set in a Hilbert space and that $c \in \mathbb{R}$ is defined as the twist angle per unit length.
 
-The problems of minimizing the functional $q$, defined above, are available in the CUTEst library (*Constrained and Unconstrained Testing Environment for Optimization Software*), which is a testing library for optimization software, see \cite{Gould2015}. These consist of $12$ quadratic programming problems defined over sets with variable bound constraints and are named: TORSION1, TORSION2, TORSION3, TORSION4, TORSION5, TORSION6, TORSIONA, TORSIONB, TORSIONC, TORSIOND, TORSIONE, and TORSIONF. These problems take values of $c$ equal to $5$, $10$, or $20$.
+The problems of minimizing the functional $q$, defined above, are available in the CUTEst library (*Constrained and Unconstrained Testing Environment for Optimization Software*), which is a testing library for optimization software. These consist of $12$ quadratic programming problems defined over sets with variable bound constraints and are named: TORSION1, TORSION2, TORSION3, TORSION4, TORSION5, TORSION6, TORSIONA, TORSIONB, TORSIONC, TORSIOND, TORSIONE, and TORSIONF. These problems take values of $c$ equal to $5$, $10$, or $20$.
 
 The set $\Omega$ we considered is defined by $\{ x \in \mathbb{R}^n ; x_j \in [-100, 50], j = 1, \ldots, n \}$. The dimensions implemented in each of the mentioned problems were $16, 100, 484$, and $1024$, according to the pre-defined parameters in the CUTEst library. For each case, we took an initial guess, provided by CUTEst, and projected it onto $\Omega$. Thus, 48 problems were tested.
 
