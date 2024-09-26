@@ -1,14 +1,17 @@
-Os estudos numéricos foram realizados para comparar os métodos do Gradiente Projetado e do Gradiente Espectral Projetado. Para isso, consideramos o problema de minimizar a função $q: K \to \mathbb{R}$ definida por 
+# Problem 
+
+Numerical studies were conducted to compare the Projected Gradient and Spectral Projected Gradient methods. For this, we considered the problem of minimizing the function $q: K \to \mathbb{R}$ defined by 
 
 $$
     q(v) = \frac{1}{2} \int_\Omega |\nabla v(x)|^2\ dx - c \int_\Omega v(x)\ dx,
 $$
 
-sujeito a $v \in K$, onde $K = \{v \in H_0^1(\Omega); |v(x)| \le 1, x \in \Omega\}$. Vale ressaltar que $K$ é um conjunto convexo e fechado em um espaço de Hilbert e que $c \in \mathbb{R}$ é definido como o ângulo de torção por unidade de comprimento.
+subject to $v \in K$, where $K = \{v \in H_0^1(\Omega); |v(x)| \le 1, x \in \Omega\}$. It is worth noting that $K$ is a convex and closed set in a Hilbert space and that $c \in \mathbb{R}$ is defined as the twist angle per unit length.
 
-Os problemas de minimizar o funcional $q$, definido acima, estão disponíveis na biblioteca CUTEst (*Constrained and Unconstrained Testing Environment for Optimization Software*), que é uma biblioteca de teste para softwares de otimização, veja \cite{Gould2015}. Eles consistem em $12$ problemas de programação quadrática definidos em conjuntos com restrições de limitação de variáveis e são denominados por: TORSION1, TORSION2, TORSION3, TORSION4, TORSION5, TORSION6, TORSIONA, TORSIONB, TORSIONC, TORSIOND, TORSIONE e TORSIONF. Esses problemas assumem os valores de $c$ igual a $5$, $10$ ou $20$.
+The problems of minimizing the functional $q$, defined above, are available in the CUTEst library (*Constrained and Unconstrained Testing Environment for Optimization Software*), which is a testing library for optimization software, see \cite{Gould2015}. These consist of $12$ quadratic programming problems defined over sets with variable bound constraints and are named: TORSION1, TORSION2, TORSION3, TORSION4, TORSION5, TORSION6, TORSIONA, TORSIONB, TORSIONC, TORSIOND, TORSIONE, and TORSIONF. These problems take values of $c$ equal to $5$, $10$, or $20$.
 
-O conjunto $\Omega$ que tomamos é definido por $\{ x \in \mathbb{R}^n ; x_j \in [-100, 50], j = 1, \ldots, n \}$. As dimensões implementadas em cada um dos problemas mencionados foram $16, 100, 484$ e $1024$, conforme os parâmetros pré-definidos na biblioteca CUTEst. Para cada caso, tomamos um chute inicial, fornecido pelo CUTEst, e projetado em $\Omega$. Assim, foram testados 48 problemas.
+The set $\Omega$ we considered is defined by $\{ x \in \mathbb{R}^n ; x_j \in [-100, 50], j = 1, \ldots, n \}$. The dimensions implemented in each of the mentioned problems were $16, 100, 484$, and $1024$, according to the pre-defined parameters in the CUTEst library. For each case, we took an initial guess, provided by CUTEst, and projected it onto $\Omega$. Thus, 48 problems were tested.
+
 
 # PG1.jl 
 
